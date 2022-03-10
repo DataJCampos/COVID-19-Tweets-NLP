@@ -29,78 +29,82 @@ https://www.kaggle.com/kazanova/sentiment140
 ## Metrics
 
 **Our project will answer following question:**
+
 Can we predict tweets related to covid?
 
 **Hypothesis:**
-H0 - The tweet is related to covid.
 
-HA - There is statisticaly significant proof that the tweet isn't related to covid.
+    H0 - The tweet is related to covid.
+
+    HA - There is statisticaly significant proof that the tweet isn't related to covid.
 
 **TP, TN, FP, FN definition**
-TP - we predicted covid tweet and it actually exist.
 
-TN - we predicted that tweet isn't covid related and the tweet actually isn't related to covid.
+    TP - we predicted covid tweet and it actually exist.
 
-FP - We predicted covid tweet but it was not a covid tweet.
+    TN - we predicted that tweet isn't covid related and the tweet actually isn't related to covid.
 
-FN - We predicted that there is no covid tweet but it actually existed.
+    FP - We predicted covid tweet but it was not a covid tweet.
+
+    FN - We predicted that there is no covid tweet but it actually existed.
 
 **Metrics used**
-To compare models we will focus on 2 major metrics:
 
-Recall - We will be focused to minimize FN.
+    To compare models we will focus on 2 major metrics:
 
-Accuracy - how good we can predict TP and TN. General metrics that will show model performance.
+    Recall - We will be focused to minimize FN.
+
+    Accuracy - how good we can predict TP and TN. General metrics that will show model performance.
 
 ## Data Preparation 
 
 1) Covid-19 dataset 
-- Remove unrelated columns
-- Train/test sets already separated 
-- Ended up with 44955 tweets
+    - Remove unrelated columns
+    - Train/test sets already separated 
+    - Ended up with 44955 tweets
 
 2) Noncovid-19 dataset
-- Create sample of 44955
-- Remove unrelated columns 
+    - Create sample of 44955
+    - Remove unrelated columns 
 
 3) Data Preprocessing 
-- Remove unnecessary numbers, punctuations, etc.
-- Tokenization.
-- Lower casing.
-- Stop words removal.
-- Stemming.
-- Lemmatization.
+    - Remove unnecessary numbers, punctuations, etc.
+    - Tokenization
+    - Lower casing
+    - Stop words removal
+    - Stemming
+    - Lemmatization
 
 4) Create dataset with both 
-- Concat test/train split
-- Train for both covid & non-covid dataset
-- Test for both covid & non-covid dataset
+    - Concat test/train split
+    - Train for both covid & non-covid dataset
+    - Test for both covid & non-covid dataset
 
 5) Vectorizer
-- Count Vectorizer 
-- TF-IDF Vectorizer
+    - Count Vectorizer 
+    - TF-IDF Vectorizer
 
-These vectorizers were selected to look further into training, validation, and ultimately our test set. Parameters were altered including min_df, max_features, etc. to increase performance of our models.
+*These vectorizers were selected to look further into training, validation, and ultimately our test set. Parameters were altered including min_df, max_features, etc. to increase performance of our models.
 
 ## Modeling 
 
 After the data preparation was complete, 4 models were created including:
-- Linear Support Vector Classifier
-- Multinomial Naive Bayes 
-- Decision Tree Classifier
-- Random Forest Classifier
+    - Linear Support Vector Classifier
+    - Multinomial Naive Bayes 
+    - Decision Tree Classifier
+    - Random Forest Classifier
 
 As modeling began, we used both vectorizers with the training and validation set. The TD-IDF performed better than count vectorizer on the models so we utilized this to finalize our metrics. After we ran a cross validation on the all models using TF-IDF. Random tree classifier ended being the best model which ultimately was used to confirmed our metrics using the testing set. 
 
 # Conclusions
 
-Based on results our final model will be: "Random Forest Classifier with using TF-IDF"
+Based on results our final model will be: "Random Forest Classifier using TF-IDF"
 
 With the following parameters after tuning:
 
-Accuracy - 0.99577
+    Accuracy - 0.99577
 
-Recall - 0.99242
+    Recall - 0.99242
 
 Because of the following reasons:
 
@@ -108,6 +112,6 @@ Because of the following reasons:
 
 In a future project, additional preprocessing steps & token patterns can be used for count vectorizer + tf-idf to attempt to get better metrics. 
 
-In conclusion, this data tells us that twitter can use nlp to predict whether if a tweet is related to covid and be able to provide resources to those positing about it.
+In conclusion, this data tells us that twitter can use NLP to predict whether if a tweet is related to covid and be able to provide resources to those positing about it.
 
 
