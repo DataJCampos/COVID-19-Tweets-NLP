@@ -114,4 +114,7 @@ In a future project, additional preprocessing steps & token patterns can be used
 
 In conclusion, this data tells us that twitter can use NLP to predict whether if a tweet is related to covid and be able to provide resources to those positing about it.
 
+### Contact Me 
 
+*If you have any questions please, reach out via LinkedIn.
+- https://www.linkedin.com/in/jeremiascampos/
