@@ -116,5 +116,5 @@ In conclusion, this data tells us that twitter can use NLP to predict whether if
 
 ### Contact Me 
 
-*If you have any questions please, reach out via LinkedIn.
+*If you have any questions please, reach out via LinkedIn.*
 - https://www.linkedin.com/in/jeremiascampos/
